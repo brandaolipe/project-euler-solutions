@@ -12,7 +12,6 @@ int	smallest_multiple(int target)
 	while (i <= target)
 	{
 		i = 1;
-		number++;
 		while (i <= target)
 		{
 			if (number % i == 0)
@@ -24,8 +23,9 @@ int	smallest_multiple(int target)
 				break ;
 			}
 		}
+		number++;
 	}
-	return (number);
+	return (number - 1);
 }
 
 int	main(void)
